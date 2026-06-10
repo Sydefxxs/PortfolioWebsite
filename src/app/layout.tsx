@@ -13,8 +13,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://arathgarza.com"),
   title: "Arath Garza | Portfolio",
-  description: "Computer Science student & software developer. Building modern web applications.",
+  description:
+    "Computer Science student & software developer. Building modern, performant web applications.",
+  keywords: [
+    "Arath Garza",
+    "Software Developer",
+    "Computer Science",
+    "Web Developer",
+    "Portfolio",
+    "React",
+    "Next.js",
+    "TypeScript",
+  ],
+  authors: [{ name: "Arath Garza" }],
+  creator: "Arath Garza",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://arathgarza.com",
+    title: "Arath Garza | Software Developer",
+    description:
+      "Computer Science student & software developer. Building modern, performant web applications.",
+    siteName: "Arath Garza",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arath Garza | Software Developer",
+    description:
+      "Computer Science student & software developer. Building modern, performant web applications.",
+  },
 };
 
 export default function RootLayout({

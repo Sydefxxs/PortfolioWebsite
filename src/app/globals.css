@@ -4,7 +4,6 @@
   --background: #0d0d0d;
   --foreground: #e5e7eb;
   --accent: #6366f1;
-  --accent-hover: #4f46e5;
   --muted: #6b7280;
   --card: #161616;
   --border: #262626;
@@ -29,6 +28,41 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  /* Subtle radial glow at top-center + faint grid */
+  background-image:
+    radial-gradient(ellipse 80% 40% at 50% -10%, rgba(99,102,241,0.14) 0%, transparent 60%),
+    linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 56px 56px, 56px 56px;
+  background-attachment: fixed;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+
+/* Animated gradient text */
+.gradient-text {
+  background-image: linear-gradient(120deg, #ffffff 0%, #c7d2fe 45%, #818cf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Soft glow utility for buttons */
+.glow-accent {
+  box-shadow: 0 8px 30px -8px rgba(99, 102, 241, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 ::-webkit-scrollbar {

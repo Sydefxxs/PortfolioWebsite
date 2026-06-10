@@ -1,28 +1,34 @@
+import Reveal from "./Reveal";
+import ContactForm from "./ContactForm";
+
 export default function Contact() {
   return (
     <section id="contact" className="py-24 px-6 max-w-6xl mx-auto">
+      <Reveal>
       <h2 className="text-sm font-mono text-indigo-400 tracking-widest uppercase mb-3">
         04. Contact
       </h2>
-      <h3 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <h3 className="text-3xl sm:text-4xl font-bold text-white mb-12">
         Let&apos;s Connect
       </h3>
 
-      <div className="max-w-lg">
-        <p className="text-gray-400 leading-relaxed mb-10">
+      <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* Left: intro + socials */}
+        <div>
+        <p className="text-gray-400 leading-relaxed mb-8">
           I&apos;m currently open to internship and part-time opportunities. Whether you have a question,
           a project idea, or just want to say hi — my inbox is always open.
         </p>
 
         <a
-          href="mailto:garzaarath74@gmail.com"
+          href="mailto:arathgarza23@gmail.com"
           className="inline-block px-8 py-4 border border-indigo-500 text-indigo-400 rounded hover:bg-indigo-500 hover:text-white transition-all font-medium"
         >
-          Say Hello
+          Email Me Directly
         </a>
 
         {/* Social row */}
-        <div className="flex gap-6 mt-12">
+        <div className="flex gap-6 mt-10">
           <a
             href="https://github.com/Sydefxxs"
             target="_blank"
@@ -35,7 +41,7 @@ export default function Contact() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/arathgarza"
+            href="https://www.linkedin.com/in/arath-garza/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-gray-500 hover:text-white transition-colors text-sm"
@@ -46,7 +52,12 @@ export default function Contact() {
             LinkedIn
           </a>
         </div>
+        </div>
+
+        {/* Right: form */}
+        <ContactForm />
       </div>
+      </Reveal>
 
       <footer className="mt-20 pt-8 border-t border-[#262626] text-center text-gray-600 text-xs font-mono">
         Built by Arath Garza · {new Date().getFullYear()}
